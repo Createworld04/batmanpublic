@@ -592,12 +592,7 @@ async def account_login(bot: Client, m: Message):
                 rout=f"https://live.theoptimistclasses.com/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.theoptimistclasses.com%2F{y[44:-14]}%2Fmaster.m3u8"
                 getstatusoutput(f'curl "{rout}" -c "cookie.txt"')              
                 cook = "cookie.txt"
-	    elif raw_text0 in "ojjankclasses":
-                y= url.replace("/", "%2F")
-                rout=f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2F{y[44:-14]}%2Fmaster.m3u8"
-                getstatusoutput(f'curl "{rout}" -c "cookie.txt"')              
-                cook = "cookie.txt"
-                
+	      
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url}`"
             prog = await m.reply_text(Show)
             cc = f'**Name :** {name}\n\n» **Index :** {count}'
